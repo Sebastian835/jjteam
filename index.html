@@ -1,1 +1,1290 @@
-Hola Mundo :)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J&J Remodeling Team LLC – Your Vision, Our Expertise.</title>
+    <link rel="icon" href="img/logo.ico" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        :root {
+            --coral: #ff5733;
+            --coral-dark: #d94624;
+            --charcoal: #2d2d2d;
+            --gray: #555;
+            --lightgray: #e8e8e8;
+            --white: #fff;
+            --black: #0f0f0f;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            color: var(--charcoal);
+            overflow-x: hidden
+        }
+
+        /* ▬▬ NAV ▬▬ */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--charcoal);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, .4);
+        }
+
+        .nwrap {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: .75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            text-decoration: none
+        }
+
+        .logo-area img {
+            height: 54px;
+            width: auto
+        }
+
+        .logo-txt {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1
+        }
+
+        .logo-txt .t1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--white);
+            letter-spacing: 2px
+        }
+
+        .logo-txt .t1 span {
+            color: var(--coral)
+        }
+
+        .logo-txt .t2 {
+            font-size: .65rem;
+            color: var(--coral);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 700
+        }
+
+        .nmenu {
+            display: flex;
+            list-style: none;
+            gap: 2rem
+        }
+
+        .nmenu a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 700;
+            font-size: .95rem;
+            letter-spacing: .5px;
+            transition: color .3s;
+            position: relative;
+            padding-bottom: 2px
+        }
+
+        .nmenu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--coral);
+            transition: width .3s
+        }
+
+        .nmenu a:hover {
+            color: var(--coral)
+        }
+
+        .nmenu a:hover::after {
+            width: 100%
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer
+        }
+
+        .burger span {
+            width: 24px;
+            height: 3px;
+            background: var(--coral);
+            transition: all .3s;
+            border-radius: 2px
+        }
+
+        /* ▬▬ HERO ▬▬ */
+        .hero {
+            margin-top: 72px;
+            min-height: 94vh;
+            background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* diagonal stripe overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-45deg,
+                    transparent, transparent 40px,
+                    rgba(255, 255, 255, .04) 40px, rgba(255, 255, 255, .04) 80px);
+        }
+
+        .hero-box {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 3rem;
+            align-items: center
+        }
+
+        .hero-left {}
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(255, 255, 255, .15);
+            border: 1px solid rgba(255, 255, 255, .3);
+            color: var(--white);
+            padding: .3rem .9rem;
+            border-radius: 50px;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 400;
+            color: var(--white);
+            line-height: .95;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 .big {
+            font-size: 5.5rem;
+            display: block
+        }
+
+        .hero .tag {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, .8);
+            margin-bottom: 1.2rem;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+
+        .hero .desc {
+            color: rgba(255, 255, 255, .75);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 550px;
+            margin-bottom: 2.5rem
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            padding: 1rem 2.2rem;
+            background: var(--white);
+            color: var(--coral);
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all .3s;
+            font-size: .95rem;
+            border: 2px solid var(--white);
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .btn-white:hover {
+            background: transparent;
+            color: var(--white);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3)
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            padding: 1rem 2.2rem;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .5);
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all .3s;
+            font-size: .95rem;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, .1)
+        }
+
+        /* hero right — stacked stat boxes */
+        .hero-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem
+        }
+
+        .st-box {
+            background: rgba(0, 0, 0, .25);
+            border-left: 4px solid var(--white);
+            padding: 1.5rem 1.8rem;
+            backdrop-filter: blur(5px);
+            transition: all .3s;
+        }
+
+        .st-box:hover {
+            background: rgba(0, 0, 0, .4);
+            transform: translateX(8px)
+        }
+
+        .st-box .num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--white);
+            line-height: 1;
+            display: block
+        }
+
+        .st-box .lbl {
+            color: rgba(255, 255, 255, .7);
+            font-size: .85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700
+        }
+
+        /* ▬▬ SECTION BASE ▬▬ */
+        section {
+            padding: 6rem 2rem
+        }
+
+        .wrap {
+            max-width: 1300px;
+            margin: 0 auto
+        }
+
+        .slabel {
+            display: inline-block;
+            font-size: .7rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--coral);
+            background: rgba(255, 87, 51, .08);
+            padding: .3rem 1rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 87, 51, .2);
+            margin-bottom: .7rem;
+        }
+
+        .stitle {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            line-height: 1;
+            letter-spacing: 2px
+        }
+
+        .sbar {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--coral-dark));
+            border-radius: 2px;
+            margin: .9rem 0 1rem
+        }
+
+        .ssub {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.75
+        }
+
+        /* ▬▬ ABOUT ▬▬ */
+        .about {
+            background: var(--lightgray)
+        }
+
+        .ab-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start
+        }
+
+        .ab-left p {
+            color: var(--gray);
+            line-height: 1.85;
+            font-size: 1.05rem;
+            margin-bottom: 1rem
+        }
+
+        .mv-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-top: 2rem
+        }
+
+        .mv {
+            background: var(--white);
+            padding: 1.6rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+            border-top: 3px solid var(--coral);
+            transition: transform .3s;
+        }
+
+        .mv:hover {
+            transform: translateY(-5px)
+        }
+
+        .mv h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            margin-bottom: .5rem;
+            letter-spacing: 1px
+        }
+
+        .mv p {
+            font-size: .92rem;
+            color: var(--gray);
+            line-height: 1.7
+        }
+
+        /* why panel */
+        .why-box {
+            background: var(--charcoal);
+            padding: 2.5rem;
+            border-radius: 14px;
+            color: var(--white)
+        }
+
+        .why-box h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px
+        }
+
+        .why-box h3 span {
+            color: var(--coral)
+        }
+
+        .why-list .item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: .7rem;
+            background: rgba(255, 255, 255, .05);
+            border-radius: 8px;
+            border-left: 3px solid var(--coral);
+            transition: all .3s;
+        }
+
+        .why-list .item:hover {
+            background: rgba(255, 87, 51, .15);
+            transform: translateX(5px)
+        }
+
+        .item .chk {
+            width: 26px;
+            height: 26px;
+            min-width: 26px;
+            background: var(--coral);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: .8rem;
+        }
+
+        .item p {
+            font-size: .93rem;
+            color: rgba(255, 255, 255, .85);
+            font-weight: 600
+        }
+
+        /* ▬▬ SERVICES ▬▬ */
+        .services {
+            background: var(--white)
+        }
+
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.8rem
+        }
+
+        .svc {
+            background: var(--lightgray);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all .35s;
+        }
+
+        .svc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--coral-dark));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s;
+        }
+
+        .svc:hover {
+            border-color: var(--coral);
+            box-shadow: 0 12px 35px rgba(255, 87, 51, .2);
+            transform: translateY(-6px);
+            background: var(--white)
+        }
+
+        .svc:hover::before {
+            transform: scaleX(1)
+        }
+
+        .svc-ico {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            transition: transform .3s;
+        }
+
+        .svc:hover .svc-ico {
+            transform: rotate(-10deg) scale(1.1)
+        }
+
+        .svc h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            color: var(--charcoal);
+            margin-bottom: .6rem;
+            letter-spacing: .5px
+        }
+
+        .svc ul {
+            list-style: none
+        }
+
+        .svc ul li {
+            font-size: .84rem;
+            color: var(--gray);
+            padding: .28rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            border-bottom: 1px dashed rgba(0, 0, 0, .06)
+        }
+
+        .svc ul li:last-child {
+            border: none
+        }
+
+        .svc ul li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            min-width: 5px;
+            background: var(--coral);
+            border-radius: 50%
+        }
+
+        /* ▬▬ GALLERY ▬▬ */
+        .gallery {
+            background: var(--charcoal);
+            color: var(--white)
+        }
+
+        .gallery .stitle {
+            color: var(--white)
+        }
+
+        .gallery .slabel {
+            background: rgba(255, 87, 51, .2);
+            border-color: rgba(255, 87, 51, .4)
+        }
+
+        .gallery .ssub {
+            color: rgba(255, 255, 255, .6)
+        }
+
+        .gallery .sbar {
+            background: linear-gradient(90deg, var(--coral), rgba(255, 87, 51, .3))
+        }
+
+        .car-wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, .6);
+            border: 3px solid rgba(255, 87, 51, .3);
+        }
+
+        .car-view {
+            position: relative;
+            height: 580px;
+            background: #0d0d0d;
+            overflow: hidden
+        }
+
+        .sl {
+            display: none;
+            width: 100%;
+            height: 100%
+        }
+
+        .sl.act {
+            display: block;
+            animation: slIn .5s ease
+        }
+
+        @keyframes slIn {
+            from {
+                opacity: 0;
+                transform: scale(1.04)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        .sl img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .92
+        }
+
+        .sl-ov {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(45, 45, 45, .7) 0%, transparent 50%)
+        }
+
+        .car-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--coral);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--white);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+            z-index: 5;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .5);
+        }
+
+        .car-btn:hover {
+            background: var(--coral-dark);
+            transform: translateY(-50%) scale(1.15)
+        }
+
+        .car-prev {
+            left: 20px
+        }
+
+        .car-next {
+            right: 20px
+        }
+
+        .car-count {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, .7);
+            color: var(--coral);
+            padding: .5rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 800;
+            font-size: .9rem;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 87, 51, .4);
+        }
+
+        /* ▬▬ CONTACT ▬▬ */
+        .contact {
+            background: var(--lightgray)
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start
+        }
+
+        .contact-panel {
+            background: var(--charcoal);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .25);
+            border-top: 4px solid var(--coral);
+        }
+
+        .contact-panel h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: .4rem;
+            letter-spacing: 1px
+        }
+
+        .contact-panel .sub {
+            color: rgba(255, 255, 255, .5);
+            font-size: .9rem;
+            margin-bottom: 2rem;
+            font-style: italic
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .info-row:last-of-type {
+            border: none;
+            padding-bottom: 0
+        }
+
+        .info-ico {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: rgba(255, 87, 51, .2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--coral);
+            font-size: 1rem;
+        }
+
+        .info-row .txt strong {
+            display: block;
+            font-size: .7rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, .4);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: .2rem;
+        }
+
+        .info-row .txt span {
+            color: rgba(255, 255, 255, .9);
+            font-size: .96rem;
+            font-weight: 600
+        }
+
+        .cta-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .8rem;
+            margin-top: 2rem
+        }
+
+        .ctabtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: .88rem;
+            letter-spacing: .3px;
+            transition: all .3s;
+            text-transform: uppercase;
+        }
+
+        .ctabtn:hover {
+            transform: translateY(-3px)
+        }
+
+        .cta-call {
+            background: var(--coral);
+            color: var(--white)
+        }
+
+        .cta-call:hover {
+            background: var(--coral-dark);
+            box-shadow: 0 8px 25px rgba(255, 87, 51, .4)
+        }
+
+        .cta-wa {
+            background: #25d366;
+            color: var(--white)
+        }
+
+        .cta-wa:hover {
+            background: #1db954;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, .3)
+        }
+
+        .cta-mail {
+            background: rgba(255, 255, 255, .1);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, .15)
+        }
+
+        .cta-mail:hover {
+            background: rgba(255, 255, 255, .2)
+        }
+
+        .cta-sms {
+            background: rgba(255, 87, 51, .25);
+            color: var(--coral);
+            border: 1px solid rgba(255, 87, 51, .3)
+        }
+
+        .cta-sms:hover {
+            background: var(--coral);
+            color: var(--white)
+        }
+
+        .map-box {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 520px;
+            border: 2px solid #ccc;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none
+        }
+
+        /* ▬▬ FOOTER ▬▬ */
+        footer {
+            background: var(--black);
+            border-top: 4px solid var(--coral);
+            padding: 2.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, .5)
+        }
+
+        .fwrap {
+            max-width: 1300px;
+            margin: 0 auto
+        }
+
+        .flogo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: .3rem;
+            letter-spacing: 2px
+        }
+
+        .flogo span {
+            color: var(--coral)
+        }
+
+        .fmotto {
+            color: var(--coral);
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-style: italic;
+            margin-bottom: .8rem
+        }
+
+        /* ▬▬ RESPONSIVE ▬▬ */
+        @media(max-width:1100px) {
+            .svc-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:768px) {
+            .burger {
+                display: flex
+            }
+
+            .nmenu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--charcoal);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: .8rem;
+                border-bottom: 2px solid var(--coral);
+            }
+
+            .nmenu.show {
+                display: flex
+            }
+
+            .hero-box,
+            .ab-grid,
+            .contact-layout {
+                grid-template-columns: 1fr
+            }
+
+            .hero h1 {
+                font-size: 3rem
+            }
+
+            .hero h1 .big {
+                font-size: 3.8rem
+            }
+
+            .svc-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .car-view {
+                height: 360px
+            }
+
+            .mv-boxes {
+                grid-template-columns: 1fr
+            }
+
+            .cta-btns {
+                grid-template-columns: 1fr
+            }
+
+            .stitle {
+                font-size: 2.5rem
+            }
+        }
+
+        @media(max-width:480px) {
+
+            .svc-grid,
+            .hero-stats {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ▬▬ NAV ▬▬ -->
+    <nav id="nav">
+        <div class="nwrap">
+            <a href="#home" class="logo-area">
+                <img src="img/logo.png" alt="J&J Remodeling Team LLC">
+                <div class="logo-txt">
+                    <span class="t1"><span>J&J</span> TEAM</span>
+                    <span class="t2">Remodeling</span>
+                </div>
+            </a>
+            <div class="burger" id="burg"><span></span><span></span><span></span></div>
+            <ul class="nmenu" id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ▬▬ HERO ▬▬ -->
+    <section id="home" class="hero">
+        <div class="hero-box">
+            <div class="hero-left">
+                <div class="hero-badge"><i class="fas fa-tools"></i> Nashville, TN — Est. 2023</div>
+                <h1><span class="big">YOUR VISION,</span>OUR EXPERTISE.</h1>
+                <p class="tag">"Solid Work. Clean Finishes. Results You'll Love."</p>
+                <p class="desc">We specialize in painting, flooring, shed construction, and professional installation of
+                    doors, windows, and cabinets. With 5+ years of hands-on experience, we deliver transformative
+                    remodeling solutions.</p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn-white"><i class="fas fa-phone"></i> Get a Quote</a>
+                    <a href="#services" class="btn-outline"><i class="fas fa-clipboard-list"></i> Our Services</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-stats">
+                    <div class="st-box"><span class="num">5+</span><span class="lbl">Years Experience</span></div>
+                    <div class="st-box"><span class="num">100%</span><span class="lbl">Quality Guaranteed</span></div>
+                    <div class="st-box"><span class="num">4</span><span class="lbl">Core Services</span></div>
+                    <div class="st-box"><span class="num">24/7</span><span class="lbl">On Call</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▬▬ ABOUT ▬▬ -->
+    <section id="about" class="about">
+        <div class="wrap">
+            <div class="ab-grid">
+                <div class="ab-left">
+                    <span class="slabel">Our Story</span>
+                    <h2 class="stitle">Who We Are</h2>
+                    <div class="sbar"></div>
+                    <p>J&J Remodeling Team LLC is a locally owned remodeling company based in Nashville, Tennessee. With
+                        five years of hands-on experience, we specialize in providing high-quality renovation and
+                        improvement services for residential properties.</p>
+                    <p>Founded and operated by <strong>Lesther Gutierrez</strong>, our company is built on hard work,
+                        reliability, and attention to detail. We take pride in delivering results that not only meet
+                        expectations but exceed them.</p>
+                    <p>Every project is handled with professionalism, precision, and a strong commitment to customer
+                        satisfaction. Our focus is simple: provide durable, functional, and visually appealing
+                        improvements that increase the value and comfort of your home.</p>
+                    <div class="mv-boxes">
+                        <div class="mv">
+                            <h4>Our Mission</h4>
+                            <p>Provide dependable and high-quality remodeling services that transform spaces and improve
+                                the daily lives of our clients.</p>
+                        </div>
+                        <div class="mv">
+                            <h4>Our Vision</h4>
+                            <p>Become a trusted remodeling company in Nashville and surrounding areas, recognized for
+                                quality work, professionalism, and long-term customer relationships.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ab-right">
+                    <div class="why-box">
+                        <h3>Why Choose <span>J&J Team?</span></h3>
+                        <div class="why-list">
+                            <div class="item">
+                                <div class="chk"><i class="fas fa-check"></i></div>
+                                <p>Quality Workmanship – We treat every project as if it were our own home.</p>
+                            </div>
+                            <div class="item">
+                                <div class="chk"><i class="fas fa-check"></i></div>
+                                <p>Reliable & On-Time – We value your time and deliver according to schedule.</p>
+                            </div>
+                            <div class="item">
+                                <div class="chk"><i class="fas fa-check"></i></div>
+                                <p>Affordable Prices – Competitive rates with guaranteed satisfaction.</p>
+                            </div>
+                            <div class="item">
+                                <div class="chk"><i class="fas fa-check"></i></div>
+                                <p>Fully Insured & Professional – You can trust our licensed and experienced team.</p>
+                            </div>
+                            <div class="item">
+                                <div class="chk"><i class="fas fa-check"></i></div>
+                                <p>Customer-Focused Approach – We listen, adapt, and exceed expectations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▬▬ SERVICES ▬▬ -->
+    <section id="services" class="services">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:3rem">
+                <span class="slabel">What We Do</span>
+                <h2 class="stitle">Our Services</h2>
+                <div class="sbar" style="margin:auto"></div>
+                <p class="ssub" style="max-width:600px;margin:1rem auto">Professional remodeling solutions for every
+                    need</p>
+            </div>
+            <div class="svc-grid">
+                <div class="svc">
+                    <div class="svc-ico"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Painting Services</h3>
+                    <ul>
+                        <li>Interior painting</li>
+                        <li>Exterior painting</li>
+                        <li>Wall & ceiling painting</li>
+                        <li>Trim & detail painting</li>
+                        <li>Repainting & touch-ups</li>
+                    </ul>
+                </div>
+                <div class="svc">
+                    <div class="svc-ico"><i class="fas fa-layer-group"></i></div>
+                    <h3>Flooring Services</h3>
+                    <ul>
+                        <li>Flooring installation</li>
+                        <li>Floor replacement</li>
+                        <li>Laminate flooring</li>
+                        <li>Vinyl flooring</li>
+                        <li>Floor repairs</li>
+                    </ul>
+                </div>
+                <div class="svc">
+                    <div class="svc-ico"><i class="fas fa-warehouse"></i></div>
+                    <h3>Shed Construction</h3>
+                    <ul>
+                        <li>Custom shed building</li>
+                        <li>Outdoor structures</li>
+                        <li>Storage solutions</li>
+                        <li>Professional framing</li>
+                    </ul>
+                </div>
+                <div class="svc">
+                    <div class="svc-ico"><i class="fas fa-tools"></i></div>
+                    <h3>Remodeling & Installation</h3>
+                    <ul>
+                        <li>Door installation</li>
+                        <li>Window installation</li>
+                        <li>Cabinet installation</li>
+                        <li>Minor home renovations</li>
+                        <li>Interior upgrades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▬▬ GALLERY ▬▬ -->
+    <section id="gallery" class="gallery">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:3rem">
+                <span class="slabel">Portfolio</span>
+                <h2 class="stitle">Our Work</h2>
+                <div class="sbar" style="margin:auto"></div>
+                <p class="ssub" style="max-width:550px;margin:1rem auto">See the quality and craftsmanship we bring to
+                    every project</p>
+            </div>
+            <div class="car-wrap">
+                <div class="car-view" id="carView">
+                    <div class="sl act"><img src="img/1.jpg" alt="Project 1">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/2.jpg" alt="Project 2">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/3.jpg" alt="Project 3">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/4.jpg" alt="Project 4">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/5.jpg" alt="Project 5">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/6.jpg" alt="Project 6">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/7.jpg" alt="Project 7">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/8.jpg" alt="Project 8">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/9.jpg" alt="Project 9">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/10.jpg" alt="Project 10">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/11.jpg" alt="Project 11">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/12.jpg" alt="Project 12">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/13.jpg" alt="Project 13">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/14.jpg" alt="Project 14">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <div class="sl"><img src="img/15.jpg" alt="Project 15">
+                        <div class="sl-ov"></div>
+                    </div>
+                    <button class="car-btn car-prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="car-btn car-next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                    <div class="car-count" id="cnt">1 / 15</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▬▬ CONTACT ▬▬ -->
+    <section id="contact" class="contact">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:3rem">
+                <span class="slabel">Get In Touch</span>
+                <h2 class="stitle">Contact Us</h2>
+                <div class="sbar" style="margin:auto"></div>
+                <p class="ssub" style="max-width:520px;margin:1rem auto">Ready to start your project? Let's talk.</p>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-panel">
+                    <h3>Let's Build Together</h3>
+                    <p class="sub">Your vision, our expertise — get in touch today.</p>
+                    <div class="info-row">
+                        <div class="info-ico"><i class="fas fa-user-tie"></i></div>
+                        <div class="txt"><strong>Owner</strong><span>Lesther Gutierrez</span></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-ico"><i class="fas fa-phone"></i></div>
+                        <div class="txt"><strong>Phone</strong><span>615-635-1952</span></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-ico"><i class="fas fa-envelope"></i></div>
+                        <div class="txt"><strong>Email</strong><span>Jjremodelingteam03@gmail.com</span></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-ico"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="txt"><strong>Address</strong><span>905 Eugene Valley Dr, Nashville, TN 37207</span>
+                        </div>
+                    </div>
+                    <div class="cta-btns">
+                        <a href="tel:6156351952" class="ctabtn cta-call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/16156351952" target="_blank" class="ctabtn cta-wa"><i
+                                class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:Jjremodelingteam03@gmail.com" class="ctabtn cta-mail"><i
+                                class="fas fa-envelope"></i> Email Us</a>
+                        <a href="sms:6156351952" class="ctabtn cta-sms"><i class="fas fa-sms"></i> Text Us</a>
+                    </div>
+                </div>
+                <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3216.5!2d-86.71!3d36.23!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88646d5a5a5a5a5a%3A0xabcdef1234567890!2s905%20Eugene%20Valley%20Dr%2C%20Nashville%2C%20TN%2037207!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▬▬ FOOTER ▬▬ -->
+    <footer>
+        <div class="fwrap">
+            <div class="flogo"><span>J&J</span> REMODELING TEAM LLC</div>
+            <div class="fmotto">"Your Vision, Our Expertise."</div>
+            <p>&copy; 2026 J&J Remodeling Team LLC. All rights reserved. | Nashville, TN 37207</p>
+        </div>
+    </footer>
+
+    <script>
+        // Nav
+        const burg = document.getElementById('burg');
+        const menu = document.getElementById('menu');
+        burg.addEventListener('click', () => menu.classList.toggle('show'));
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('show')));
+
+        // Carousel
+        let cur = 0;
+        const slides = document.querySelectorAll('.sl');
+        const tot = slides.length;
+        const cnt = document.getElementById('cnt');
+
+        function go(n) {
+            slides[cur].classList.remove('act');
+            cur = (n + tot) % tot;
+            slides[cur].classList.add('act');
+            cnt.textContent = `${cur + 1} / ${tot}`;
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => go(cur + 1));
+        document.getElementById('prevBtn').addEventListener('click', () => go(cur - 1));
+
+        // Keyboard
+        document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(cur + 1); if (e.key === 'ArrowLeft') go(cur - 1) });
+
+        // Touch
+        let tx = 0;
+        const stage = document.getElementById('carView');
+        stage.addEventListener('touchstart', e => tx = e.changedTouches[0].screenX, { passive: true });
+        stage.addEventListener('touchend', e => { const d = e.changedTouches[0].screenX - tx; if (d < -50) go(cur + 1); if (d > 50) go(cur - 1) });
+
+        // Autoplay
+        let ap = setInterval(() => go(cur + 1), 5000);
+        stage.addEventListener('mouseenter', () => clearInterval(ap));
+        stage.addEventListener('mouseleave', () => ap = setInterval(() => go(cur + 1), 5000));
+    </script>
+</body>
+
+</html>
